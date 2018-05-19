@@ -4,6 +4,7 @@
   <p-slider
   [(ngModel)]="rangeValues"
   id="slider"
+  #slider
   name = "slider"
   [range]="true"
   [min] = "minimumBoundaryPrice"
@@ -11,7 +12,7 @@
   (onChange)="handleChange($event)">
 </p-slider>
 <button type="submit" name="apply" id = "apply">Apply</button>
-<button type="button" name="clear" id = "clear">Clear</button>
+<button [hidden] = "!isRangeValuesChanged" type="button" name="clear" id = "clear" (click)="onClear(slider)">Clear</button>
 
 </div>
 </form>

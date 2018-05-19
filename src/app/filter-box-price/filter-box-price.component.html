@@ -5,7 +5,9 @@
 [class.filter-is-not-applied]="!filterApplied"
 
 >Price</button>
-<div *ngIf="isExpanded" id="slider-form"><slider-form (filterApplied)="onFilterApplied($event)"></slider-form></div>
+<div *ngIf="isExpanded" id="slider-form"><slider-form
+(filterApplied)="onFilterApplied($event)"
+></slider-form></div>
 
 
 

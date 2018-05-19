@@ -14,12 +14,19 @@ export class SliderFormComponent implements OnInit {
   maximumFilterPrice: number = this.maximumBoundaryPrice;
   rangeValues: number[] = [this.minimumBoundaryPrice, this.maximumBoundaryPrice];
   isFilterApplied : boolean;
-
+  isRangeValuesChanged : boolean = false;
   constructor() {
     
   }
 
   handleChange(e){
+    if(e.values[0] == this.minimumBoundaryPrice && e.values[1] == this.maximumBoundaryPrice)
+    {
+      this.isRangeValuesChanged = false;
+    }
+    else{
+      this.isRangeValuesChanged = true;
+    }
     this.minimumFilterPrice = e.values[0];
     this.maximumFilterPrice = e.values[1];
   }
@@ -32,5 +39,24 @@ export class SliderFormComponent implements OnInit {
     this.isFilterApplied = true;
     this.filterApplied.emit(this.isFilterApplied);
   }
+
+  onClear(slider)
+  {
+    this.isFilterApplied = false;
+    this.filterApplied.emit(this.isFilterApplied);
+    this.clearFilters();
+    slider.handleValues[0] = 0;
+    slider.handleValues[1] = 100;
+    this.isRangeValuesChanged = false;
+
+
+  }
+
+  clearFilters(){
+    this.minimumFilterPrice = this.minimumBoundaryPrice;
+    this.maximumFilterPrice = this.maximumBoundaryPrice;
+  }
+
+
 
 }
