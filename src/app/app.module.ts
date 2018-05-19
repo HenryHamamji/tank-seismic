@@ -12,7 +12,6 @@ import { USSeismicDesignService } from './services/us-seismic-design.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FilterBoxPriceComponent } from './filter-box-price/filter-box-price.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { NouisliderModule } from 'ng2-nouislider';
 import { SliderFormComponent } from './slider-form/slider-form.component';
 import { SliderModule } from 'primeng/slider';
 
@@ -30,7 +29,6 @@ import { SliderModule } from 'primeng/slider';
     HttpModule,
     FormsModule,
     NgbModule.forRoot(),
-    NouisliderModule,
     SliderModule
     ],
   providers: [GoogleMapsService, USSeismicDesignService],

@@ -7,21 +7,45 @@ cursor: pointer;
 margin-bottom: 10px;
 }
 
-div{
+#apply{
     color: rgb(3, 16, 80);
     background-color: Transparent;
-    background-repeat:no-repeat;
     cursor:pointer;
     overflow: hidden;
     outline:none;
     font-weight: bold;
-}
-
-div :hover{
-text-decoration: underline;
-}
-
-div [name = apply]{
     float: right;
-    padding-top: 50px;
+    margin-top: 50px;
+    border: none;
+
+}
+
+#apply:hover {
+    border-bottom:2px solid rgb(3, 16, 80);
+}
+
+#clear{
+    color: grey;
+    background-color: Transparent;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    float: left;
+    margin-top: 50px;
+    border: none;
+
+}
+
+#clear:hover {
+    border-bottom:2px solid grey;
+}
+
+
+
+.filter-body{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 300px;
+    height: 140px;
+    padding: 10px;
 }

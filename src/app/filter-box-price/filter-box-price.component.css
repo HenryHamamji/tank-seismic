@@ -1,0 +1,35 @@
+#slider-form{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #ccc;
+
+}
+
+button
+{
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+
+.filter-is-not-applied{
+    background-color: white;
+}
+
+button:hover .filter-is-not-applied{
+    background-color: #ccc;
+}
+
+.filter-is-applied{
+    background-color: rgb(3, 16, 80);
+
+}
+.filter-is-applied:hover{
+    background-color: rgb(3, 16, 80);
+}

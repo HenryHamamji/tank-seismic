@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {SliderModule} from 'primeng/slider';
 
 @Component({
@@ -7,11 +7,13 @@ import {SliderModule} from 'primeng/slider';
   styleUrls: ['./slider-form.component.css']
 })
 export class SliderFormComponent implements OnInit {
-  minimumBoundaryPrice : number = 30;
-  maximumBoundaryPrice: number = 60;
+  @Output() filterApplied = new EventEmitter();
+  minimumBoundaryPrice : number = 20;
+  maximumBoundaryPrice: number = 150;
   minimumFilterPrice : number = this.minimumBoundaryPrice;
   maximumFilterPrice: number = this.maximumBoundaryPrice;
   rangeValues: number[] = [this.minimumBoundaryPrice, this.maximumBoundaryPrice];
+  isFilterApplied : boolean;
 
   constructor() {
     
@@ -23,6 +25,12 @@ export class SliderFormComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onApply(f)
+  {
+    this.isFilterApplied = true;
+    this.filterApplied.emit(this.isFilterApplied);
   }
 
 }
