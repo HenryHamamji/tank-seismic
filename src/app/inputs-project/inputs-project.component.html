@@ -1,0 +1,37 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+  <div class="form-group col-lg-3">
+    <label for="designCodeReferenceDocument"> Design Code Reference Document </label>
+    <select ngModel name="designCodeReferenceDocument"
+    id="designCodeReferenceDocument"
+    class="form-control">
+    <option *ngFor="let designCodeReferenceDocument of designCodeReferenceDocuments" [value]="designCodeReferenceDocument"> {{designCodeReferenceDocument}} </option>
+  </select>
+
+    <label for="siteSoilClassification"> Site Soil Classification </label>
+    <select ngModel="siteSoilClassification" name="siteSoilClassification"
+    id="siteSoilClassification"
+    class="form-control">
+    <option
+    *ngFor="let siteSoilClassification of siteSoilClassifications"
+    [ngValue]="siteSoilClassification"> Site Class {{siteSoilClassification.siteClass}} - {{siteSoilClassification.description}}
+  </option>
+  </select>
+
+  <label for="riskCategory"> Risk Category </label>
+  <select ngModel name="riskCategory"
+  id="riskCategory"
+  class="form-control">
+  <option *ngFor="let riskCategory of riskCategories"
+  [value]="riskCategory"> {{riskCategory}} </option>
+</select>
+
+    <label for="siteAddress"> Site Address </label>
+    <input ngModel name = "siteAddress" id="siteAddress" type="text" class="form-control"> 
+    <button class="btn btn-primary"> Get Values </button>  
+
+  </div>
+
+  <p>
+    {{f.value | json}}
+  </p>
+</form>

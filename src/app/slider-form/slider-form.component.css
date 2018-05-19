@@ -1,0 +1,27 @@
+::ng-deep .ui-slider .ui-slider-range{
+background: green;
+}
+
+::ng-deep .ui-slider .ui-slider-handle {
+cursor: pointer;
+margin-bottom: 10px;
+}
+
+div{
+    color: rgb(3, 16, 80);
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-weight: bold;
+}
+
+div :hover{
+text-decoration: underline;
+}
+
+div [name = apply]{
+    float: right;
+    padding-top: 50px;
+}

@@ -1,0 +1,15 @@
+.fa-search{
+    font-size:18px;
+    color: grey;
+    padding: 10px;
+    position: absolute;
+    -webkit-text-stroke: 1px white;
+}
+
+input[type=text] {    
+    padding-left: 40px; 
+}
+
+#wrapper{
+    position: relative;
+}

@@ -1,0 +1,16 @@
+<form>
+<div class="form-group col-2">
+  <label for="priceRange">${{minimumFilterPrice}}-${{maximumFilterPrice}}</label>
+  <p-slider
+  [(ngModel)]="rangeValues"
+  name="slider"
+  [range]="true"
+  [min] = "minimumBoundaryPrice"
+  [max]="maximumBoundaryPrice"
+  (onChange)="handleChange($event)"
+  >
+</p-slider>
+
+<div name="apply">Apply</div>
+</div>
+</form>
