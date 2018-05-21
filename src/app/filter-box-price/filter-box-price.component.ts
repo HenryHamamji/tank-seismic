@@ -3,7 +3,7 @@ import {SliderFormComponent} from '../slider-form/slider-form.component';
 @Component({
   selector: 'filter-box-price',
   templateUrl: './filter-box-price.component.html',
-  styleUrls: ['./filter-box-price.component.css']
+  styleUrls: ['./filter-box-price.component.css', '../../filter-box-styles.css']
 })
 export class FilterBoxPriceComponent implements OnInit  {
 

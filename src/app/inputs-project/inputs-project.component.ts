@@ -21,7 +21,13 @@ export class InputsProjectComponent implements OnInit {
 
    }
 
-
+   sD1 : number;
+   sDs: number;
+   sM1: number;
+   sMs: number;
+   sS : number;
+   s1: number;
+   tL: number;
    
   address : string;
   siteSoilClassification : string;
@@ -77,11 +83,8 @@ export class InputsProjectComponent implements OnInit {
   {
     this.googleMapsService.getLatLongFromAddress(this.geoCodeUrl)
     .subscribe(response => {
-      //console.log(response.json());
       this.latitude = response.json().results[0].geometry.location.lat;
-      //console.log(this.latitude);
       this.longitude = response.json().results[0].geometry.location.lng;
-      //console.log(this.longitude);
     });
   }
 
@@ -111,7 +114,17 @@ export class InputsProjectComponent implements OnInit {
   getSeismicDesignCriteria()
   {
     this.uSSeismicDesignService.getSeismicDesignReport(this.seismicDesignUrl)
-    .subscribe(response => {console.log(response.json())});
+    .subscribe(response => {
+      let data = response.json().response.data;
+      this.sD1 = data.sd1;
+      this.sS = data.ss;
+      this.s1 = data.s1;
+      this.sMs = data.sms;
+      this.sM1 = data.sm1;
+      this.sDs = data.sds;
+      this.tL = data["t-sub-l"];
+      console.log(response.json());
+    });
   }
 
 }

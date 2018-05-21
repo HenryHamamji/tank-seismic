@@ -28,8 +28,18 @@
     <label for="siteAddress"> Site Address </label>
     <input ngModel name = "siteAddress" id="siteAddress" type="text" class="form-control"> 
     <button class="btn btn-primary"> Get Values </button>  
+  </div>
+
+  <div class="form-group col-lg-3">
+
+    <label for="tankHeight"> Tank Height (ft) </label>
+    <input ngModel name = "tankHeight" id="tankHeight" type="text" class="form-control"> 
+
+    <label for="tankDiameter"> Tank Diameter (ft) </label>
+    <input ngModel name = "tankDiameter" id="tankDiameter" type="text" class="form-control"> 
 
   </div>
+
 
   <p>
     {{f.value | json}}

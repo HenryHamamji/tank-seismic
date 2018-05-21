@@ -1,0 +1,48 @@
+.btn-circle
+{
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 0px;
+    border-radius: 50%;
+    background: white;
+    border-color: rgb(3, 16, 80);
+    color: rgb(3, 16, 80);
+    border-width: thin;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.btn-label-increment{
+    padding-bottom: 3px;
+}
+
+.btn-label-decrement{
+    padding-bottom: 3px;
+}
+
+button:focus {
+    outline:0;
+}
+
+button:disabled {
+    border-color: #ccc;
+    color: #ccc;
+  }
+
+  .btn-circle .increment{
+      float: right;
+  }
+  .btn-circle .decrement{
+    float: left;
+}
+
+#counter-text{
+    width: 20px;
+    float: none;
+    display: inline-block;
+}

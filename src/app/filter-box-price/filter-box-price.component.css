@@ -1,22 +1,8 @@
 #slider-form{
     margin-left: 20px;
     margin-top: 5px;
+    width:300px;
 }
-
-button:hover {
-    background-color: #ccc;
-
-}
-
-button
-{
-    background-color: white;
-    color: black;
-    border-radius: 3px;
-    border: 1px solid grey;
-    cursor: pointer;
-}
-
 
 .listings-not-filtered{
     background-color: white;
@@ -34,8 +20,4 @@ button:hover .listings-not-filtered{
 .listings-filtered:hover{
     background-color: #4C6A92;
     color: white;
-}
-
-#slider-form{
-    width:300px;
 }

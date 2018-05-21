@@ -16,7 +16,9 @@ import { SliderFormComponent } from './slider-form/slider-form.component';
 import { SliderModule } from 'primeng/slider';
 //import { ClickOutsideModule } from 'ng4-click-outside';
 import { ClickOutsideDirective } from './click-outside.directive';
-import { FilterBoxDeskTypeComponent } from './filter-box-desk-type/filter-box-desk-type.component';
+import { FilterBoxSpaceTypeComponent } from './filter-box-space-type/filter-box-space-type.component';
+import { SpaceTypeFormComponent } from './space-type-form/space-type-form.component';
+import { CounterBtnComponent } from './counter-btn/counter-btn.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FilterBoxDeskTypeComponent } from './filter-box-desk-type/filter-box-de
     SliderFormComponent,
     ClickOutsideDirective,
     ClickOutsideDirective,
-    FilterBoxDeskTypeComponent
+    FilterBoxSpaceTypeComponent,
+    SpaceTypeFormComponent,
+    CounterBtnComponent
     ],
   imports: [
     BrowserModule,

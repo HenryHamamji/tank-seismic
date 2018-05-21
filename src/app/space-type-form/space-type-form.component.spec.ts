@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilterBoxDeskTypeComponent } from './filter-box-desk-type.component';
+import { SpaceTypeFormComponent } from './space-type-form.component';
 
-describe('FilterBoxDeskTypeComponent', () => {
-  let component: FilterBoxDeskTypeComponent;
-  let fixture: ComponentFixture<FilterBoxDeskTypeComponent>;
+describe('SpaceTypeFormComponent', () => {
+  let component: SpaceTypeFormComponent;
+  let fixture: ComponentFixture<SpaceTypeFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilterBoxDeskTypeComponent ]
+      declarations: [ SpaceTypeFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilterBoxDeskTypeComponent);
+    fixture = TestBed.createComponent(SpaceTypeFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

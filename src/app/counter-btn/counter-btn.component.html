@@ -1,0 +1,14 @@
+<button type="button" class="btn-circle decrement"
+(click) = "onDecrement()"
+[disabled]="isCounterZero()">
+<div class="btn-label-decrement"> - </div>
+</button>
+<div id="counter-text">
+    {{counter}}
+</div>
+
+<button type="button" class="btn-circle increment" (click) = "onIncrement()">
+<div class="btn-label-decrement"> + </div>
+</button>
+
+

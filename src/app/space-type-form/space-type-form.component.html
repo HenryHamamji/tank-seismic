@@ -1,0 +1,17 @@
+<form #deskTypeForm="ngForm" (ngSubmit) = "onApply(deskTypeForm)" class="filter-body" >
+  <div class="form-group">
+    <div style="float: left; width: 45%;">
+        <ul>
+            <li *ngFor = "let spaceType of spaceTypes" class="space-label">
+              {{spaceType}} 
+            </li>
+          </ul>
+
+    </div>
+<div style="float: right; width: 55%;">
+    <ul class="counter">
+        <li  *ngFor = "let spaceType of spaceTypes" class="counter-btn" ><counter-btn id="counter-btn" ></counter-btn></li>
+    </ul>
+    <button type="submit" name="apply" id = "apply" >Apply</button>
+    
+  </div>

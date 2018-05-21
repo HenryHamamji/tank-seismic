@@ -1,0 +1,52 @@
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  .filter-body{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 340px;
+    height: 170px;
+    padding-top: 10px;
+}
+
+form{
+    width: 340px;
+    display: inline-block;
+}
+
+#apply{
+  color: rgb(3, 16, 80);
+  background-color: Transparent;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  font-weight: bold;
+  float: right;
+  border: none;
+  margin-right: 5px;
+}
+
+#apply:hover {
+  border-bottom:2px solid rgb(3, 16, 80);
+}
+
+.counter{
+  float: right;
+  padding-right: 10px;
+}
+
+.space-label{
+  height: 36px;
+}
+
+.counter-btn{
+  height: 36px;
+}
+
+#counter-btn{
+  width: 100%;
+  text-align: center;
+}
