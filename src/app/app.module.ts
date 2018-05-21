@@ -16,6 +16,7 @@ import { SliderFormComponent } from './slider-form/slider-form.component';
 import { SliderModule } from 'primeng/slider';
 //import { ClickOutsideModule } from 'ng4-click-outside';
 import { ClickOutsideDirective } from './click-outside.directive';
+import { FilterBoxDeskTypeComponent } from './filter-box-desk-type/filter-box-desk-type.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ClickOutsideDirective } from './click-outside.directive';
     FilterBoxPriceComponent,
     SliderFormComponent,
     ClickOutsideDirective,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    FilterBoxDeskTypeComponent
     ],
   imports: [
     BrowserModule,
