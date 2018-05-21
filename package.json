@@ -24,6 +24,7 @@
     "bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
+    "ng4-click-outside": "^1.0.1",
     "ngx-popover": "0.0.16",
     "primeng": "^5.2.7",
     "rxjs": "^6.0.0",

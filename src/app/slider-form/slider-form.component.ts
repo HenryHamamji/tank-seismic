@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import {SliderModule} from 'primeng/slider';
 
 @Component({
@@ -7,13 +7,15 @@ import {SliderModule} from 'primeng/slider';
   styleUrls: ['./slider-form.component.css']
 })
 export class SliderFormComponent implements OnInit {
-  @Output() filterApplied = new EventEmitter();
+  @Input() isExpanded : boolean;
+  @Output() rangeValuesChanged = new EventEmitter();
+  @Output() onClickApply = new EventEmitter();
   minimumBoundaryPrice : number = 20;
   maximumBoundaryPrice: number = 150;
   minimumFilterPrice : number = this.minimumBoundaryPrice;
   maximumFilterPrice: number = this.maximumBoundaryPrice;
   rangeValues: number[] = [this.minimumBoundaryPrice, this.maximumBoundaryPrice];
-  isFilterApplied : boolean;
+  isFilterApplied : boolean; // Apply been clicked to initiate filtering.
   isRangeValuesChanged : boolean = false;
   constructor() {
     
@@ -23,9 +25,11 @@ export class SliderFormComponent implements OnInit {
     if(e.values[0] == this.minimumBoundaryPrice && e.values[1] == this.maximumBoundaryPrice)
     {
       this.isRangeValuesChanged = false;
+      this.rangeValuesChanged.emit({isRangeValuesChanged: this.isRangeValuesChanged, minimumFilterPrice : this.minimumFilterPrice, maximumFilterPrice : this.maximumFilterPrice});
     }
     else{
-      this.isRangeValuesChanged = true;
+    this.isRangeValuesChanged = true;
+      this.rangeValuesChanged.emit({isRangeValuesChanged: this.isRangeValuesChanged, minimumFilterPrice : this.minimumFilterPrice, maximumFilterPrice : this.maximumFilterPrice});
     }
     this.minimumFilterPrice = e.values[0];
     this.maximumFilterPrice = e.values[1];
@@ -37,19 +41,16 @@ export class SliderFormComponent implements OnInit {
   onApply(f)
   {
     this.isFilterApplied = true;
-    this.filterApplied.emit(this.isFilterApplied);
+    this.onClickApply.emit();
   }
 
   onClear(slider)
   {
-    this.isFilterApplied = false;
-    this.filterApplied.emit(this.isFilterApplied);
+    this.isRangeValuesChanged = false;
+      this.rangeValuesChanged.emit({isRangeValuesChanged: this.isRangeValuesChanged, minimumFilterPrice : this.minimumFilterPrice, maximumFilterPrice : this.maximumFilterPrice});
     this.clearFilters();
     slider.handleValues[0] = 0;
     slider.handleValues[1] = 100;
-    this.isRangeValuesChanged = false;
-
-
   }
 
   clearFilters(){

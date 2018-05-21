@@ -14,6 +14,8 @@ import { FilterBoxPriceComponent } from './filter-box-price/filter-box-price.com
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SliderFormComponent } from './slider-form/slider-form.component';
 import { SliderModule } from 'primeng/slider';
+//import { ClickOutsideModule } from 'ng4-click-outside';
+import { ClickOutsideDirective } from './click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,17 @@ import { SliderModule } from 'primeng/slider';
     InputsProjectComponent,
     SearchBarComponent,
     FilterBoxPriceComponent,
-    SliderFormComponent
+    SliderFormComponent,
+    ClickOutsideDirective,
+    ClickOutsideDirective
     ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     NgbModule.forRoot(),
-    SliderModule
+    SliderModule,
+    //ClickOutsideModule,
     ],
   providers: [GoogleMapsService, USSeismicDesignService],
   bootstrap: [AppComponent]

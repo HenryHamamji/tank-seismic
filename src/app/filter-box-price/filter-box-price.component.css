@@ -18,18 +18,24 @@ button
 }
 
 
-.filter-is-not-applied{
+.listings-not-filtered{
     background-color: white;
 }
 
-button:hover .filter-is-not-applied{
+button:hover .listings-not-filtered{
     background-color: #ccc;
 }
 
-.filter-is-applied{
-    background-color: rgb(3, 16, 80);
+.listings-filtered{
+    background-color: #4C6A92;
+    color: white;
 
 }
-.filter-is-applied:hover{
-    background-color: rgb(3, 16, 80);
+.listings-filtered:hover{
+    background-color: #4C6A92;
+    color: white;
+}
+
+#slider-form{
+    width:300px;
 }

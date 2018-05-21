@@ -52,3 +52,8 @@ margin-bottom: 10px;
     height: 140px;
     padding: 10px;
 }
+
+form{
+    width:300px;
+    display: inline-block;
+}

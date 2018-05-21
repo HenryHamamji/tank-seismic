@@ -1,12 +1,13 @@
 
 <button type="button"
 (click)="toggle()"
-[class.filter-is-applied]="filterApplied"
-[class.filter-is-not-applied]="!filterApplied"
+[class.listings-filtered]="listingsFiltered&&filterApplied"
+[class.listings-not-filtered]="!listingsFiltered"
+id="price-btn"
+>{{priceTitle}}</button>
+<div *ngIf="isExpanded" id="slider-form" clickOutside (clickOutside)="onClickedOutside($event)" ><slider-form [isExpanded] = "isExpanded"
+(rangeValuesChanged)="onFilterRangeValuesChanged($event)" (onClickApply)="filterListings()"
 
->Price</button>
-<div *ngIf="isExpanded" id="slider-form"><slider-form
-(filterApplied)="onFilterApplied($event)"
 ></slider-form></div>
 
 

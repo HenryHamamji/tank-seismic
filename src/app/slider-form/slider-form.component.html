@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit) = "onApply(f)" class="filter-body">
+<form #f="ngForm" (ngSubmit) = "onApply(f)" class="filter-body" >
 <div class="form-group">
   <label>${{minimumFilterPrice}}-${{maximumFilterPrice}}</label>
   <p-slider
@@ -11,7 +11,7 @@
   [max]="maximumBoundaryPrice"
   (onChange)="handleChange($event)">
 </p-slider>
-<button type="submit" name="apply" id = "apply">Apply</button>
+<button type="submit" name="apply" id = "apply" >Apply</button>
 <button [hidden] = "!isRangeValuesChanged" type="button" name="clear" id = "clear" (click)="onClear(slider)">Clear</button>
 
 </div>
