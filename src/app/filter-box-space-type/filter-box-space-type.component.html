@@ -1,6 +1,8 @@
 <button type="button"
 (click)="toggle()"
 id="space-type-btn"
+[class.listings-filtered]="listingsFiltered&&filterApplied"
+[class.listings-not-filtered]="!listingsFiltered"
 >{{spaceTypeTitle}}</button>
 <div>
 <space-type-form *ngIf="isExpanded" (clickOutside)="onClickedOutside($event)"

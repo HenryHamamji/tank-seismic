@@ -1,0 +1,17 @@
+.listings-not-filtered{
+    background-color: white;
+}
+
+button:hover .listings-not-filtered{
+    background-color: #ccc;
+}
+
+.listings-filtered{
+    background-color: #4C6A92;
+    color: white;
+
+}
+.listings-filtered:hover{
+    background-color: #4C6A92;
+    color: white;
+}
