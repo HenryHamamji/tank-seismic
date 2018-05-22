@@ -33,4 +33,25 @@ export class FilterBoxSpaceTypeComponent implements OnInit {
     console.log("filtering listings ...");
   }
 
+  onClickedOutside(e: Event) {
+    var target = e.target as HTMLInputElement;
+    var idAttr = target.id;
+      if(idAttr == "space-type-btn" && this.isExpanded)
+      {
+        return;
+      }
+            this.isExpanded = !this.isExpanded;
+
+      if(this.filterApplied)
+      {
+        console.log("going to filter listings...");
+              this.filterListingsOnClickOutside();
+      }
+      this.setSpaceTypesTitle();
+  }
+
+  setSpaceTypesTitle(){
+
+  }
+
 }

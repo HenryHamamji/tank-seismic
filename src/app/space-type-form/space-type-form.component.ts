@@ -11,7 +11,26 @@ export class SpaceTypeFormComponent implements OnInit {
 
   ngOnInit() {
   }
-
   spaceTypes : string[] = ['Desks', 'Private Offices', 'Meeting Rooms'];
+  deskCount : number = 0;
+  privateOfficeCount : number = 0;
+  meetingRoomCount : number = 0;
+
+
+  onDeskCounterChanged(counterValue){
+    this.deskCount = counterValue;
+  }
+
+  onPrivateOfficeCounterChanged(counterValue){
+    this.privateOfficeCount = counterValue;
+  }
+
+  onMeetingRoomCounterChanged(counterValue){
+    this.meetingRoomCount = counterValue;
+  }
+
+
+
+
 
 }

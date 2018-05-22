@@ -10,7 +10,14 @@
     </div>
 <div style="float: right; width: 55%;">
     <ul class="counter">
-        <li  *ngFor = "let spaceType of spaceTypes" class="counter-btn" ><counter-btn id="counter-btn" ></counter-btn></li>
+        <li class="counter-btn" >
+        <counter-btn
+        (counterChanged) = "onDeskCounterChanged($event)" id="desk">
+        </counter-btn></li>
+
+<li class="counter-btn"> <counter-btn id="office" (counterChanged) = "onPrivateOfficeCounterChanged($event)"></counter-btn>  </li>
+<li class="counter-btn"> <counter-btn id="meetingRoom" (counterChanged) = "onMeetingRoomCounterChanged($event)"></counter-btn>  </li>
+
     </ul>
     <button type="submit" name="apply" id = "apply" >Apply</button>
     

@@ -30,8 +30,6 @@ export class FilterBoxPriceComponent implements OnInit  {
     this.filterApplied = rangeValuesData.isRangeValuesChanged;
     this.minimumFilterPrice = rangeValuesData.minimumFilterPrice;
     this.maximumFilterPrice = rangeValuesData.maximumFilterPrice;
-
-
   }
 
     onClickedOutside(e: Event) {

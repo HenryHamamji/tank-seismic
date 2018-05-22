@@ -3,5 +3,5 @@
 id="space-type-btn"
 >{{spaceTypeTitle}}</button>
 <div>
-<space-type-form *ngIf="isExpanded" ></space-type-form>
+<space-type-form *ngIf="isExpanded" (clickOutside)="onClickedOutside($event)" ></space-type-form>
 </div>

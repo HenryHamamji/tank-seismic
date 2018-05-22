@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'counter-btn',
@@ -9,16 +9,23 @@ export class CounterBtnComponent implements OnInit {
 
   constructor() { }
   counter : number = 0;
+  privateOfficeCounter : number = 0;
+  meetingRoomCounter : number = 0;
+
+  @Output() counterChanged = new EventEmitter();
+  
   ngOnInit() {
   }
 
   onIncrement(){
-    this.counter ++;
+      this.counter ++;
+      this.counterChanged.emit(this.counter);
   }
 
   onDecrement(){
-    this.counter --;
-  }
+      this.counter --;
+      this.counterChanged.emit(this.counter);
+    }
 
   isCounterZero(){
     if(this.counter == 0){
