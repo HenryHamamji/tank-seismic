@@ -1,4 +1,4 @@
-<form #deskTypeForm="ngForm" (ngSubmit) = "onApply(deskTypeForm)" class="filter-body" >
+<form #deskTypeForm="ngForm" (ngSubmit) = "onApply()" class="filter-body" >
   <div class="form-group">
     <div style="float: left; width: 45%;">
         <ul>
@@ -8,17 +8,18 @@
           </ul>
 
     </div>
-<div style="float: right; width: 55%;">
+<div style="float: right; width: 55%;" >
     <ul class="counter">
         <li class="counter-btn" >
         <counter-btn
-        (counterChanged) = "onDeskCounterChanged($event)" id="desk">
+        (counterChanged) = "onDeskCounterChanged($event)" id="desk" [counter] = "deskCount">
         </counter-btn></li>
 
-<li class="counter-btn"> <counter-btn id="office" (counterChanged) = "onPrivateOfficeCounterChanged($event)"></counter-btn>  </li>
-<li class="counter-btn"> <counter-btn id="meetingRoom" (counterChanged) = "onMeetingRoomCounterChanged($event)"></counter-btn>  </li>
+<li class="counter-btn"> <counter-btn id="office" (counterChanged) = "onPrivateOfficeCounterChanged($event)" [counter] = "privateOfficeCount"></counter-btn>  </li>
+<li class="counter-btn"> <counter-btn id="meetingRoom" (counterChanged) = "onMeetingRoomCounterChanged($event)" [counter] = "meetingRoomCount"></counter-btn>  </li>
 
     </ul>
     <button type="submit" name="apply" id = "apply" >Apply</button>
-    
+    <button [hidden] = "!isSpaceTypeSelected" type="button" name="clear" id = "clear" (click)="onClear()">Clear</button>
+
   </div>

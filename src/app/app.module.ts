@@ -35,14 +35,13 @@ import { CalcsComponent } from './calcs/calcs.component';
     SpaceTypeFormComponent,
     CounterBtnComponent,
     CalcsComponent
-    ],
+      ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     NgbModule.forRoot(),
     SliderModule,
-    //ClickOutsideModule,
     ],
   providers: [GoogleMapsService, USSeismicDesignService],
   bootstrap: [AppComponent]

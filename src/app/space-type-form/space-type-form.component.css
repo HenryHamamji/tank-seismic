@@ -46,3 +46,16 @@ form{
   height: 36px;
 }
 
+#clear{
+  color: grey;
+  background-color: Transparent;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+  float: left;
+  border: none;
+}
+
+#clear:hover {
+  border-bottom:2px solid grey;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'counter-btn',
@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class CounterBtnComponent implements OnInit {
 
   constructor() { }
-  counter : number = 0;
+  @Input() counter : number = 0;
   privateOfficeCounter : number = 0;
   meetingRoomCounter : number = 0;
 

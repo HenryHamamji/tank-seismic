@@ -112,7 +112,8 @@ export class FilterBoxSpaceTypeComponent implements OnInit {
   }
 
     filterListings(){
-    this.listingsFiltered = true;
+      this.listingsFiltered = true;
+      this.filterApplied = this.isFilterApplied();
     this.isExpanded = !this.isExpanded;
     this.setSpaceTypesTitle();
     console.log("filtering listings ...");
