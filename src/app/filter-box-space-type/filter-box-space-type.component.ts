@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {SpaceTypeFormComponent} from '../space-type-form/space-type-form.component';
 
 @Component({
   selector: 'filter-box-space-type',
@@ -51,7 +52,25 @@ export class FilterBoxSpaceTypeComponent implements OnInit {
   }
 
   setSpaceTypesTitle(){
+    
+    if(this.filterApplied && this.listingsFiltered)
+    {
+      this.spaceTypeTitle = "temp";
+    }
+    else
+    {
+      this.spaceTypeTitle = "Space Types";
+    }
 
   }
+
+    filterListings(){
+    this.listingsFiltered = true;
+    this.isExpanded = !this.isExpanded;
+    this.setSpaceTypesTitle();
+    console.log("filtering listings ...");
+
+  }
+
 
 }
