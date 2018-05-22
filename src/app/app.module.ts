@@ -42,6 +42,7 @@ import { CalcsComponent } from './calcs/calcs.component';
     FormsModule,
     NgbModule.forRoot(),
     SliderModule,
+    BrowserAnimationsModule
     ],
   providers: [GoogleMapsService, USSeismicDesignService],
   bootstrap: [AppComponent]
