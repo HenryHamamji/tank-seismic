@@ -19,6 +19,7 @@ import { ClickOutsideDirective } from './click-outside.directive';
 import { FilterBoxSpaceTypeComponent } from './filter-box-space-type/filter-box-space-type.component';
 import { SpaceTypeFormComponent } from './space-type-form/space-type-form.component';
 import { CounterBtnComponent } from './counter-btn/counter-btn.component';
+import { CalcsComponent } from './calcs/calcs.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CounterBtnComponent } from './counter-btn/counter-btn.component';
     ClickOutsideDirective,
     FilterBoxSpaceTypeComponent,
     SpaceTypeFormComponent,
-    CounterBtnComponent
+    CounterBtnComponent,
+    CalcsComponent
     ],
   imports: [
     BrowserModule,
