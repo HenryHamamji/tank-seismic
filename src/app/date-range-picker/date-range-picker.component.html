@@ -22,7 +22,8 @@
     <div *ngFor="let day of daysArray">
       <div class="calendar-days flex-container flex-center"
       (click)="selectedDate(day)"
-      [ngClass]="{'inactive': !day, 'today': todayCheck(day), 'selected' : isSelected(day) }">{{day?.date()}}</div>
+      (mouseover) = "getDateMousedOver(day)"
+      [ngClass]="{'inactive': !day || isDayInthePast(day), 'today': todayCheck(day), 'selected' : isSelected(day), 'considered' : isConsidered(day) }">{{day?.date()}}</div>
     </div>
 
   </div>
