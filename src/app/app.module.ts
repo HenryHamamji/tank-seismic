@@ -20,6 +20,8 @@ import { FilterBoxSpaceTypeComponent } from './filter-box-space-type/filter-box-
 import { SpaceTypeFormComponent } from './space-type-form/space-type-form.component';
 import { CounterBtnComponent } from './counter-btn/counter-btn.component';
 import { CalcsComponent } from './calcs/calcs.component';
+import { DateRangePickerComponent } from './date-range-picker/date-range-picker.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { CalcsComponent } from './calcs/calcs.component';
     FilterBoxSpaceTypeComponent,
     SpaceTypeFormComponent,
     CounterBtnComponent,
-    CalcsComponent
+    CalcsComponent,
+    DateRangePickerComponent
       ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { CalcsComponent } from './calcs/calcs.component';
     FormsModule,
     NgbModule.forRoot(),
     SliderModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FlexLayoutModule
     ],
   providers: [GoogleMapsService, USSeismicDesignService],
   bootstrap: [AppComponent]

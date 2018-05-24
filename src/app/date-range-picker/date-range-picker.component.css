@@ -1,0 +1,60 @@
+.flex-container {
+  display: flex;
+  display: -webkit-flex;
+
+}
+
+.flex-center {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.calendar-days{
+    width: 60px;
+    height: 60px;
+    background: navy;
+    border: 3px solid #ccc;
+    color: white;
+    cursor: pointer;
+}
+
+#calendar-container{
+    width: 462px;
+}
+
+.flex-column {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.inactive{
+    opacity: 0.5;
+}
+
+.flex-center-horz {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.width-5 {
+    width: 5%;
+}
+
+.height-20px {
+    height: 20px;
+}
+
+.today{
+    color: orange;
+}
+
+.selected{
+    background: peru;
+    opacity: 0.6;
+}
