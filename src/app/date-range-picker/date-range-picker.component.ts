@@ -55,7 +55,7 @@ export class DateRangePickerComponent implements OnInit {
   }
 
   public selectedDate(day) {
-    if (!day  || this.isDayInthePast(day)) {
+    if (!day || this.isDayInthePast(day)) {
       return;
     }
     let dayFormatted = day.format('MM/DD/YYYY');
@@ -124,11 +124,8 @@ export class DateRangePickerComponent implements OnInit {
     return day;
   }
 
-  isDayInthePast(day){
-    //console.log(this.currentDate.format('MM/DD/YYYY'));
-    //console.log(day.format('MM/DD/YYYY'));
-
-    if(day.isBefore(this.currentDate, 'day')){
+  isDayInthePast(day) {
+    if (day.isBefore(this.currentDate, 'day')) {
       return true;
     }
     return false;
