@@ -71,9 +71,37 @@
 
 #chevron-right:hover{
     cursor: pointer;
+    border: 1px solid black;
 }
 
 
-#chevron-left{
+#chevron-left:hover{
     cursor: pointer;
+    border: 1px solid black;
+    }
+
+#chevron-right{
+    border: 1px solid #ccc;
+    width: 40px;
+    text-align: center;
+    margin-left: 10px;
+
+}
+
+#chevron-left{
+    border: 1px solid #ccc;
+    width: 40px;
+    text-align: center;
+
+
+}
+
+.fa-chevron-left{
+    margin-right: 2px;
+}
+
+
+.fa-chevron-right{
+    margin-left: 2px;
+
 }

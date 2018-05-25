@@ -23,6 +23,7 @@ import { CalcsComponent } from './calcs/calcs.component';
 import { DateRangePickerComponent } from './date-range-picker/date-range-picker.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FilterBoxDatePickerComponent } from './filter-box-date-picker/filter-box-date-picker.component';
+import { ListingComponent } from './listing/listing.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FilterBoxDatePickerComponent } from './filter-box-date-picker/filter-bo
     CounterBtnComponent,
     CalcsComponent,
     DateRangePickerComponent,
-    FilterBoxDatePickerComponent
+    FilterBoxDatePickerComponent,
+    ListingComponent
       ],
   imports: [
     BrowserModule,

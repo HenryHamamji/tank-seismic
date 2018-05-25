@@ -1,0 +1,28 @@
+.listing-container{
+    width:300px;
+    border: 1px solid #ccc;
+    height: 300px;
+    position : relative;
+    vertical-align:middle;
+
+    }
+
+.img{
+    max-width: 100%;
+    max-height: 60%;
+    min-height: 60%;
+    display:inline-block;
+    margin:auto;
+    vertical-align:middle;
+
+}
+
+.height-20{
+    height: 20px;
+}
+
+.title{
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
