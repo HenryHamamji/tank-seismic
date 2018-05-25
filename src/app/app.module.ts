@@ -22,6 +22,7 @@ import { CounterBtnComponent } from './counter-btn/counter-btn.component';
 import { CalcsComponent } from './calcs/calcs.component';
 import { DateRangePickerComponent } from './date-range-picker/date-range-picker.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { FilterBoxDatePickerComponent } from './filter-box-date-picker/filter-box-date-picker.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     SpaceTypeFormComponent,
     CounterBtnComponent,
     CalcsComponent,
-    DateRangePickerComponent
+    DateRangePickerComponent,
+    FilterBoxDatePickerComponent
       ],
   imports: [
     BrowserModule,

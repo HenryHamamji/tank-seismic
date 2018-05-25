@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import * as moment from 'moment';
 
 @Component({
@@ -14,6 +14,7 @@ export class DateRangePickerComponent implements OnInit {
   public dateTo;
   public dateConsidered;
   public currentDate = moment();
+  @Output() filterWasApplied = new EventEmitter();
 
   constructor() { }
 
@@ -63,12 +64,16 @@ export class DateRangePickerComponent implements OnInit {
     if (this.isFormValid()) {
       this.dateTo = null;
       this.dateFrom = null;
+      this.filterWasApplied.emit(false);
+      
       console.log("date from: " + this.dateFrom);
       console.log("date to: " + this.dateTo);
       return;
     }
     if (this.dateFrom == null) {
       this.dateFrom = dayFormatted;
+      this.filterWasApplied.emit(true);
+
     }
     else {
       this.dateTo = dayFormatted;

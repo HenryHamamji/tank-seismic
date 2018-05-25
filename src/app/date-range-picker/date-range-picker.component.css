@@ -46,6 +46,11 @@
     width: 5%;
 }
 
+.width-50 {
+    width: 50%;
+    text-align: center;
+}
+
 .height-20px {
     height: 20px;
 }
@@ -62,4 +67,13 @@
 .considered{
     background: green;
     opacity: 0.2;
+}
+
+#chevron-right:hover{
+    cursor: pointer;
+}
+
+
+#chevron-left{
+    cursor: pointer;
 }

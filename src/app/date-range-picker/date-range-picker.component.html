@@ -1,11 +1,11 @@
 <div class="flex-container flex-center">
   <div id="calendar-container" class="flex-container flex-column">
     <div class="flex-container flex-center-horz">
-      <div class="fa fa-chevron-left" (click) = "previousMonth()"></div>
+        <div id="chevron-left"><div class="fa fa-chevron-left fa-2x" (click)="previousMonth()"></div></div>
       <div class="width-5"></div>
-          <div>{{date.format('MMMM')}} {{date.format('YYYY')}}</div>
+          <div class="width-50">{{date.format('MMMM')}} {{date.format('YYYY')}}</div>
                 <div class="width-5"></div>
-      <div class="fa fa-chevron-right" (click) = "nextMonth()"></div>
+      <div id="chevron-right"><div  class="fa fa-chevron-right fa-2x" (click)="nextMonth()"></div></div>
 
     </div>
 <div class="height-20px"></div>

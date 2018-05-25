@@ -1,0 +1,62 @@
+.listings-not-filtered{
+    background-color: white;
+}
+
+button:hover .listings-not-filtered{
+    background-color: #ccc;
+}
+
+.listings-filtered{
+    background-color: #4C6A92;
+    color: white;
+
+}
+.listings-filtered:hover{
+    background-color: #4C6A92;
+    color: white;
+}
+
+.filter-body{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 500px;
+    height: 500px;
+    padding-top: 10px;
+}
+
+form{
+    width: 500px;
+    display: inline-block;
+}
+
+#apply{
+    color: rgb(3, 16, 80);
+    background-color: Transparent;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-weight: bold;
+    float: right;
+    margin-top: 25px;
+    margin-right: 10px;
+    border: none;
+}
+
+#apply:hover {
+    border-bottom:2px solid rgb(3, 16, 80);
+}
+
+#clear{
+    color: grey;
+    background-color: Transparent;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    float: left;
+    margin-top: 25px;
+    border: none;
+}
+
+#clear:hover {
+    border-bottom:2px solid grey;
+}

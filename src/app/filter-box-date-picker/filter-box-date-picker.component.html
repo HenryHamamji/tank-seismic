@@ -1,0 +1,19 @@
+<button type="button"
+(click)="toggle()"
+id="date-picker-btn"
+[class.listings-filtered]="listingsFiltered&&filterApplied"
+[class.listings-not-filtered]="!listingsFiltered"
+>{{datesPickedTitle}}</button>
+<div>
+<form #datePickerForm="ngForm" (ngSubmit) = "onApply(datePickerForm)" class="filter-body" *ngIf="isExpanded"
+(clickOutside)="onClickedOutside($event)" >
+    <div class="form-group">
+    <date-range-picker  
+    (onClickApply)="filterListings()"
+    (filterWasApplied) = "isFilterApplied($event)"></date-range-picker>
+    </div>
+    <button type="submit" name="apply" id = "apply" >Apply</button>
+<button [hidden] = "!filterApplied" type="button" name="clear" id = "clear" (click)="onClear()">Clear</button>
+
+    </form>
+  </div>
